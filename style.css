@@ -1,0 +1,1244 @@
+@import url(reset.css);
+
+
+*{
+    box-sizing: border-box;
+    transition: all 1s ease;
+    font-family: "Itim";
+}
+
+header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 3%;
+    padding-right: 30vw;
+}
+nav{
+    height: fit-content;
+}
+
+.hide{
+    display: none;
+}
+
+
+li, a{
+    font-family: "Itim";
+    text-decoration: none;
+    color: rgb(12, 11, 11);
+    font-size: clamp(24px, 4vw,64px);
+    display: inline-block;
+}
+.icon{
+    height:clamp(32px,10vw,110px);
+}
+
+
+nav ul li{
+    padding: 0px 0px 0px clamp(8px,6vw,80px);
+}
+
+.Turk_slide{
+    background: url(images/Turkey.png);
+}
+.Kenya_slide{
+    background: url(images/Kenya.png);
+}
+.Egypt_slide{
+    background: url(images/Egypt.png);
+}
+.Norway_slide{
+    background: url(images/Norway.png);
+}
+.Brazil_slide{
+    background: url(images/Brazil.png);
+}
+.China_slide{
+    background: url(images/China.png);
+}
+.France_slide{
+    background: url(images/France.png);
+}
+.Peru_slide{
+    background: url(images/Peru.png);
+}
+.Greece_slide{
+    background: url(images/Greece.png);
+}
+
+
+
+
+.toggleMenuBtn{
+    transform: translateX(-600px);
+}
+.toggleContBtn{
+    display: none;
+}
+
+
+main{
+    padding: 0px 4%;
+    overflow-x: hidden;
+
+}
+main h1{
+    font-family: "Itim";
+    text-decoration: none;
+    color: rgb(12, 11, 11);
+    display: inline-block;
+    font-size: clamp(48px,8vw,128px);
+
+}
+main h2{
+    font-family: "Inter";
+    text-decoration: none;
+    line-height: 48px;
+    color: rgb(12, 11, 11);
+    display: inline-block;
+    font-size: clamp(16px,2vw,40px);
+    margin-top:1vw ;
+
+}
+.slider{
+    display: inline-block;
+    height: auto;
+    margin-top: 32px;
+    padding-top: 32px;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 1s;
+    height: 343px;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.slider a {
+    position: absolute;
+    height: 25.093vh;
+    width: 21vw;
+    min-width: 155px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    box-shadow: 5px 5px 40px rgba(0,0,0,30%);
+    justify-items: end;
+    align-content: end;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    color: rgb(255, 255, 255);
+    font-family: "Inria sans";
+    font-size: 40px;
+    transition: all 1s ease-out;
+    /*animation: fade 1s ease 0s infinite normal none;*/
+    
+    
+
+}
+
+
+
+.slider a:hover {
+    transform: translate(-5px,-5px);
+}
+.fade-in{
+    animation: fade-in 1s forwards ease-out;
+}
+.fade-out{
+    animation: fade-out 1s forwards ease-out;
+}
+
+
+@keyframes fade-in{
+    from{transform: translate(-100%,0px);
+    opacity: 0;}
+    to{transform: translate(0px,0px);
+        opacity: 1;
+    }    
+}
+
+@keyframes fade-out{
+    from{transform: translate(0px,0px);
+    opacity: 1;}
+    to{transform: translate(100%,0px);
+        opacity: 0;
+    }    
+}
+
+
+
+
+
+
+.menu{
+    font-family: "Itim";
+    margin-left: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1.5%;
+    border: 3px solid black;
+    width: 418px;
+    height: 411px;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 4;
+    
+}
+.countriesCont{
+    display: grid;
+    margin-top: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-height: 300px;
+ 
+}
+.menu span{
+    font-size: 2.5rem;
+}
+.country {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+/* Hide the browser's default checkbox */
+.country input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .country:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .country input:checked ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .country input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .country .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.showHideMenuBtn{
+    position: absolute;
+    margin-left: 16px;
+    font-family: "Itim";
+    font-size: 24px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+.showHideMenuBtn::after{
+    content: "";
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    display: block;
+    border-top: 7px solid rgb(0, 0, 0);
+    position: absolute;
+    right: -20%;
+    bottom: 25%;
+}
+.select-menu *{
+    z-index: 99;
+
+}
+
+.maxPeopCont{
+    position: relative;
+    top: 25px;
+    
+    
+}
+.maxPeopInputCont{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    transform: translateY(-10%);
+    padding: 0px;
+}
+.decrease{
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    font-size: 24px;
+    padding: 0px 16px;
+    border-radius: 4px;
+}
+.maxPeopInput{
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 24px;
+    width: 55px;
+    font-family: "Itim";
+    text-align: center;
+    padding: 0px;
+    z-index: 500;
+
+}
+
+.increase{
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    font-size: 24px;
+    padding: 0px 16px;
+    border-radius: 4px;
+}
+.decrease:hover ,.increase:hover{
+    background-color: #ccc;
+}
+/*
+.select-menu{
+    width: 10%;
+    display: inline-block;
+    position: absolute;
+    transform: translate(6px , 2px);
+}
+
+.select-menu .select-btn{
+    display: inline-flex;
+    height: 25px;
+    background: rgb(255, 255, 255) ;
+    padding: 20px ;
+    font-size: 9px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 2px black solid;
+    border-radius: 4px;
+    
+}
+
+.select-btn span{
+    font-size: 25px;
+}
+
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+
+.select-menu .options{
+    position: relative;
+    padding: 10px 45px ;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.select-menu.active .options{
+    display: block;
+}
+
+.options .option{
+    display: flex;
+    height: 35px;
+    width: 50px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.options .option:hover{
+    background: #F2F2F2;
+}
+
+.option i{
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+.option .option-text{
+    font-size: 25px;
+    transform: translateX(10%);
+}
+
+.sBtn-text{
+    font-size: 25px;
+}
+
+*/
+
+
+
+.minMaxPriceCont , .priceSpan{
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.minMaxPriceCont{
+    display: inline-block;
+}
+
+.minMaxPriceCont input[type="number"] {
+    transform: translateY(-4px);
+    width: 100px;
+    height: 30px;
+    border: 2px black solid;
+    border-radius: 4px;
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    
+    
+
+}
+
+.minMaxPriceCont input[type="number"]::-webkit-inner-spin-button,
+.minMaxPriceCont input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.filterSubmitBtn{
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 20px;
+    background-color: black;
+    border: none ;
+    border-radius: 4px;    
+    color: white;
+    padding: 8px 16px;
+    font-family: "Itim";
+    
+}
+
+.filterSubmitBtn:hover{
+    background-color: rgb(68, 68, 68);
+    transition: all 0.6s;
+}
+
+.filterSubmitBtn:active{
+    color: rgb(68, 68, 68);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.toursCont{
+    position: relative;
+    display: grid;
+    width: 70%;
+    height: fit-content;
+    left: 27%;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-y: visible;
+    gap: 32px;
+    padding-bottom: 64px;
+    
+    
+}
+
+.tourCard{
+    display: inline-block;
+    border: 3px black solid;
+    border-radius: 16px;
+    padding-right: 0px;
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+
+
+}
+
+.backgrImg{
+    width:100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.tourTitle{
+    padding: 16px;
+    font-size: 28px;
+    font-family: "Itim";
+    font-weight: 500;
+}
+
+.tourPrice{
+    bottom: 16px;
+    left: 16px;
+    position: absolute;
+    font-size: 24px;
+    font-family: "Itim";
+    font-weight: 500;
+    display: inline-block;
+}
+
+.tourLearnMore{
+    font-family: "Itim";
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px ;
+    border: none;
+    cursor: pointer;
+}
+.tourLearnMore:hover{
+    background-color: rgb(68, 68, 68);
+    transition: all 0.6s;
+}
+.tourLearnMore:active{
+    color: rgb(68, 68, 68);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.currentPage{
+    background: linear-gradient(21deg, rgba(84,186,225,1) 20%, rgba(20,67,69,1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+.backToAllBtn{
+    position: absolute;
+    left: 14%;
+    font-size: 24px;
+    top: 15%;
+}
+
+.backToAllArrow{
+    position: absolute;
+    left: -25px;
+    top: 1px;
+
+}
+.tourDetailsCont{
+    border: 3px black solid;
+    height: 49.352vh;
+    width: 75.521vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 19%;
+    border-radius: 16px;
+    font-family: "Itim";
+    min-width: 1029px;
+}
+.tourDetailsImg{
+    height: 90%;
+    width: 46%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+}
+.tourDetailsTitle{
+    font-size: clamp(40px,3vw,64px);
+    font-family: "Itim";
+}
+.tourDetailsTitleCont{
+    width: 40%;
+    height: 15%;
+    position: absolute;
+    top: 4.444vh;
+    right: 10.5%;
+}
+.tourDetailsDescriptCont{
+    position: absolute;
+    top:57%;
+    right: 10.5%;
+    width: 40%;
+
+}
+.tourDetailsDescript{
+    font-size: 24px;
+
+}
+.tourDetailsPMDCont{
+    position: absolute;
+    top: 35%;
+    right: 9% ;
+    width: 40%;
+}
+.tourDetailsPMD{
+    font-size: clamp(26px,2vw,32px);
+    line-height: 55px;
+    display: inline-block;
+    padding-right: 20%;
+
+}
+.tourDetailsPMD:nth-child(1):after{
+    content: "per person";
+    font-size: 24px;
+    position: absolute;
+    left: -3%;
+    top:30px;
+    opacity: 67%;
+}
+.tourDetailsPMD:nth-child(2):after{
+    content: "max people";
+    font-size: 24px;
+    position: absolute;
+    left: 25%;
+    top:30px;
+    opacity: 67%;
+}
+.tourDetailsPMD:nth-child(3):after{
+    content: "duration";
+    font-size: 24px;
+    position: absolute;
+    left: 56%;
+    top:30px;
+    opacity: 67%;
+}
+
+
+.maxTouristsCont .maxPeopInputCont{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    transform: translateY(-10%);
+    padding: 0px;
+}
+.maxTouristsCont .decrease{
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    padding: 0px 16px;
+    border-radius: 4px;
+}
+.maxTouristsCont .maxPeopInput{
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    width: 35px;
+    font-family: "Itim";
+    text-align: center;
+    padding: 0px;
+    z-index: 500;
+
+}
+
+.maxTouristsCont .increase{
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    padding: 0px 16px;
+    border-radius: 4px;
+}
+.maxTouristsCont .increase:hover,.maxTouristsCont .decrease:hover{
+    background-color: #ccc;
+}
+
+
+
+
+
+
+.maxTouristsCont{
+    position: absolute;
+    bottom: 16%;
+    left: 49.5%;
+    width: fit-content;
+    min-width: 456px;
+    
+}
+.maxTouristsSpan{
+    font-size: 24px;
+}
+.maxTouristsDateSpan{
+    font-size: 24px;
+    padding-left: 5%;
+}
+.maxTouristsCont .maxPeopInputCont{
+    transform: translate(3%,-2%);
+}
+.maxTouristsDate{
+    font-family: "Itim";
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+    transform: translate(3%,20%);
+    box-shadow: none;
+    width: 25%;
+    z-index: 50;
+
+}
+.maxTouristsCalendarIcon{
+    position: absolute;
+    left: 83%;
+    width: 16px;
+
+}
+.toForm{
+    font-family: "Itim";
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    bottom: 4%;
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px ;
+    border: none;
+    cursor: pointer;
+}
+.toForm:hover{
+    background-color: rgb(68, 68, 68);
+    transition: all 0.6s;
+}
+.toForm:active{
+    color: rgb(68, 68, 68);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+.tourPayCont{
+    display: block;
+    width: 75.52%;
+    border: 3px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 19%;
+    height: 55.925%;
+}
+.chosenTourUserCont{
+    position: absolute;
+    width: 59.3%;
+    height: 100%;
+}
+.chosenTourUserCont span{
+    font-family: "Itim";
+    font-size: 32px;
+}
+.userGeneralInfo{
+    border: 2px black solid;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 24px;
+    border-radius: 16px;
+    padding: 24px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+.userGeneralInfo input{
+    font-family: "Itim";
+    font-size: 24px;
+    border-width:0 ;
+    border-bottom: 2px #ccc solid;
+
+}
+.userGeneralInfo input:focus{
+    outline: none;
+    border-bottom: 2px black solid;
+    transition: all 0.3s;
+}
+.generalInfoForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 24px;
+    
+}
+.userPaymentInfo{
+    border: 2px black solid;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 48px;
+    border-radius: 16px;
+    padding: 24px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+.userPaymentInfo input{
+    font-family: "Itim";
+    font-size: 24px;
+    border-width:0 ;
+    border-bottom: 2px #ccc solid;
+
+}
+.userPaymentInfo input:focus{
+    outline: none;
+    border-bottom: 2px black solid;
+    transition: all 0.3s;
+}
+.paymentInfoForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 24px;
+    
+}
+.flatpickr-months , .flatpickr-innerContainer{
+    font-family: "Itim";
+}
+
+
+.tourPayCont input[type="number"]::-webkit-inner-spin-button,
+.tourPayCont input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.redshit{
+    background-color: rgb(255, 0, 0, 80%);
+    border-radius: 4px;
+    
+}
+.payBtn{
+    font-family: "Itim";
+    display: inline-block;
+    position: absolute;
+    left: 50% ;
+    bottom: 7%;
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transform: translateX(-50%);
+    width: 30%;
+    
+}
+.payBtn:hover{
+    background-color: rgb(68, 68, 68);
+    transition: all 0.6s;
+}
+.payBtn:active{
+    color: rgb(68, 68, 68);
+    background-color: white;
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 430px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        flex-wrap: nowrap;
+    }
+    header{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 2vw;
+    }   
+
+        
+        li, a{
+            font-family: "Itim";
+            text-decoration: none;
+            color: rgb(12, 11, 11);
+            display: inline-block;
+    }
+    nav ul li{
+        padding: 0px 16px
+    }
+    .main{
+        overflow-x: hidden;
+        height: 1000px;
+    }
+    .slider{
+        position: relative;
+        display: inline-block;
+        height: auto;
+        margin-top: 16px;
+        gap: 16px;
+        max-width: 100%;
+        height: 1000px
+    }
+    .slider a {
+        min-width: 0px;
+        width: 90vw;
+        height: 25.093vh;
+        display: block;
+        position: absolute;
+        
+    }
+    .slider a:hover {
+        transform: translate(0px,0px);
+    }
+
+    .slider a:nth-child(1){
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+
+    }
+    .slider a:nth-child(2){
+        top: 300px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(3){
+        top: calc(300px*2);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(4){
+        top: calc(300px*3);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(5){
+        display: block;
+        top: calc(300px*4);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(6){
+        display: block;
+        top: calc(300px*5);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(7){
+        display: block;
+        top: calc(300px*6);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(8){
+        display: block;
+        top: calc(300px*7);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .slider a:nth-child(9){
+        display: block;
+        top: calc(300px*8);
+        left: 0px;
+        right: 0px;
+        width: 100%;
+    }
+    .showHideMenuBtn{
+        display: inline-block;
+        right: 8%;
+    }
+    .countriesCont{
+        font-size: 16px;
+    }
+    .menu{
+        top: 120px;
+        z-index: 4;
+        display: initial;
+        width: 95%;
+    }
+    .toursCont{
+        width: 93.023vw;
+        top: 64px;
+        left: 0px;
+        right: 0px;
+        grid-template-columns: 1fr;
+
+    }
+    .tourCard{
+        margin-left: 24px;
+    }
+    .backToAllBtn{
+        top: 9%;
+        left: 10%;
+    }
+    .tourDetailsCont{
+        top:14%;
+        width: 93.023vw;
+        min-width: 0px;
+        height: 55vh;
+    }
+    .tourDetailsTitleCont{
+        overflow: hidden;
+        position: relative;
+        top:  39%  /*1.114vh*/;
+        left: 4%;
+        width: 80%;
+        height: auto;
+    }
+    .tourDetailsTitle{
+        font-size: 26px;
+        font-family: "Itim";
+    }
+    .tourDetailsImg{
+        top: 1.114vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94%;
+        height: 35%;
+    }
+    .tourDetailsDescriptCont{
+        top: 65%;
+        width: 93%;
+        left: 4%;
+    }
+    .tourDetailsDescript{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .tourDetailsPMDCont{
+        position: absolute;
+        top: 49%;
+        left: 48% ;
+        width: 88%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+    }
+    .tourDetailsPMD{
+        font-size: 26px;
+        line-height: 55px;
+        display: inline-block;
+        padding-right: 0px;
+
+    
+    }
+    .tourDetailsPMD:nth-child(1):after{
+        content: "per person";
+        font-size: 18px;
+        position: absolute;
+        left: 0%;
+        top:30px;
+        opacity: 67%;
+    }
+    .tourDetailsPMD:nth-child(2):after{
+        content: "max people";
+        font-size: 18px;
+        position: absolute;
+        left: 36%;
+        top:30px;
+        opacity: 67%;
+    }
+    .tourDetailsPMD:nth-child(3):after{
+        content: "duration";
+        font-size: 18px;
+        position: absolute;
+        left: 80%;
+        top:30px;
+        opacity: 67%;
+    }
+    .maxTouristsCont{
+        position: absolute;
+        bottom: 14%;
+        left: 3.5%;
+    }
+    .maxTouristsSpan{
+        font-size: 18px;
+    }
+    .maxTouristsCont .maxPeopInputCont{
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 4px;
+        transform: translateY(-2%);
+        padding: 0px;
+    }
+    .maxTouristsCont .decrease{
+        background-color: #fff;
+        border: none;
+        box-shadow: none;
+        font-size: 18px;
+        padding: 0px 8px;
+        border-radius: 4px;
+    }
+    .maxTouristsCont .maxPeopInput{
+        background-color: white;
+        border: none;
+        box-shadow: none;
+        font-size: 18px;
+        width: 35px;
+        display: inline;
+        font-family: "Itim";
+        padding: 0 0px;
+
+    
+    }
+    
+    .maxTouristsCont .increase{
+        background-color: #fff;
+        border: none;
+        box-shadow: none;
+        font-size: 18px;
+        padding: 0px 8px;
+        border-radius: 4px;
+    }
+    .maxTouristsDate{
+        width: 27%;
+    }
+    .maxTouristsDateSpan{
+        font-size: 18px;
+        padding-left: 2%;
+    }
+    .maxTouristsCalendarIcon{
+        left: 72%;
+    }
+    .toForm{
+        font-size: 20px;
+        width: 90%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3%;
+
+
+
+    }
+
+}
+@media(min-width: 431px){
+
+    .slider a:nth-child(1){
+        left: 0.833vw;
+    }
+    
+    .slider a:nth-child(2){
+        left: calc(21.771vw + 0.833vw);
+    }
+    .slider a:nth-child(3){
+        left: calc(21.771vw*2 + 0.833vw);
+    }
+    .slider a:nth-child(4){
+        left: calc(21.771vw*3 + 0.833vw);
+    }
+    .slider a:nth-child(5){
+        left: calc(21.771vw*4 + 0.833vw);
+        opacity: 0;
+    
+    }
+    .showHideMenuBtn{
+        display: none;
+    }
+    }

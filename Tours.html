@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header><a href="index.html" class="icon">
+        <img class="icon" src="images/icon.png"></a>
+        <nav>
+            <ul>
+                <li><a href="Tours.html" class="currentPage">Tours</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Cruises.html">Cruises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <button class="showHideMenuBtn ">Filter </button>
+
+    <div class="menu">
+        <span>Country :</span><label class="country" style="transform: translate(50px , -3px);font-size: 20px;">All countries<input type="checkbox" id="selectAll" ><span class="checkmark"></span></label><br>
+        <div class="countriesCont">
+            <label class="country">Brazil
+                <input type="checkbox"  value="Brazil">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">China
+                <input type="checkbox"  value="China">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">Egypt
+                <input type="checkbox"  value="Egypt">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">France
+                <input type="checkbox"  value="France">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">Greece
+                <input type="checkbox"  value="Greece">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">Kenya
+                <input type="checkbox"  value="Kenya">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">Norway
+                <input type="checkbox"  value="Norway">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">Peru
+                <input type="checkbox"  value="Peru">
+                <span class="checkmark"></span>
+            </label>
+            <label class="country">Turkey
+                <input type="checkbox" value="Turkey">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <span class="priceSpan">Price : </span>
+        <div class="minMaxPriceCont">
+            <input type="number" class="minPrice" placeholder="Min">
+            <input type="number" class="maxPrice" placeholder="Max">
+        </div>
+        <div class="maxPeopCont">
+            <span class="maxPeopSpan">People :</span>
+            <div class="maxPeopInputCont">
+                                        <button class="decrease">-</button>
+                                        <input type="number" class="maxPeopInput" value="1" readonly>
+                                        <button class="increase">+</button>
+                                    </div>
+            
+        </div>
+        <button class="filterSubmitBtn">Submit</button>
+    </div>
+
+    <div class="toursCont">
+    </div>
+
+
+
+
+
+
+    
+    <script src="script.js" type="module"></script>
+</body>
+</html>

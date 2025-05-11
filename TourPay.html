@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Pay Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_left_alt,calendar_month" rel="stylesheet" />
+    
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    
+    <header><a href="index.html" class="icon">
+        <img class="icon" src="images/icon.png"></a>
+        <nav>
+            <ul>
+                <li><a href="Tours.html" class="currentPage">Tours</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Cruises.html">Cruises</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    <a href="Tours.html" class="backToAllBtn"><span class="material-symbols-outlined backToAllArrow">arrow_left_alt</span>Back to all</a>
+    
+    
+ 
+
+
+    <div class="tourPayCont">
+        <div class="chosenTourUserCont">
+            <span>Fill form to book a tour</span>
+            <fieldset class="userGeneralInfo">
+                <legend style="font-family: Itim; font-size: 28px; padding: 0px 16px;">Generail info</legend>
+                <form class="generalInfoForm">
+                    <input type="text" class="userInfoName" placeholder="Name" required>
+                    <input type="text" class="userInfoSurname" placeholder="Surname" required>
+                    <input type="email" class="userInfoEmail" placeholder="Email" required >
+                    <input type="text" class="userInfoNumber" placeholder="Phone number (+0-123-456-789)" required>
+                </form>
+                
+            </fieldset>
+            <fieldset class="userPaymentInfo">
+                <legend style="font-family: Itim; font-size: 28px; padding: 0px 16px;">Payment info</legend>
+                <form class="paymentInfoForm">
+                    <input type="number" class="userCardNumber" placeholder="Card Number : " required>
+                    <input type="text" class="userN&S" placeholder="Card Holder : Name & Surname" required>
+                    <div class="userExpDate"><input type="text" class="userExpMonth" placeholder="Expire date : MM" style="width: 49%;margin: 0;padding: 0;" min="1" max="12" inputmode="numeric" maxlength="2" required>
+                                                <input type="text" class="userExpYear" placeholder="Expire date : YY" style="width: 49%;margin: 0;padding: 0;" min="25" inputmode="numeric" maxlength="2" required></div>
+                    <input type="text" class="userCVV" placeholder="CVV" maxlength="3" required>
+                </form>
+                
+            </fieldset>
+            <button class="payBtn">Pay</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

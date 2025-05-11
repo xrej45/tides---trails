@@ -1,0 +1,200 @@
+export const tours = [
+  {
+    country: "Brazil",
+    title: "Amazon Rainforest Adventure",
+    people: 4,
+    price: 3200,
+    pricePerPerson: 800,
+    maxPeople: 6,
+    duration: 7,
+    description: "Explore the heart of the Amazon Rainforest with guided tours, river cruises, and unique wildlife encounters. Perfect for nature enthusiasts!",
+    name: "Brazil_Amazon"
+  },
+  {
+    country: "China",
+    title: "Great Wall Expedition",
+    people: 3,
+    price: 2800,
+    pricePerPerson: 933,
+    maxPeople: 5,
+    duration: 5,
+    description: "Discover the grandeur of the Great Wall of China with immersive guided treks and cultural insights along the way.",
+    name: "China_GreatWall"
+  },
+  {
+    country: "Egypt",
+    title: "Pyramids and Sphinx Experience",
+    people: 5,
+    price: 2400,
+    pricePerPerson: 480,
+    maxPeople: 8,
+    duration: 4,
+    description: "Step back in time with visits to the iconic Pyramids of Giza and the enigmatic Sphinx. An unforgettable journey through ancient history.",
+    name: "Egypt_Pyramids"
+  },
+  {
+    country: "France",
+    title: "Romantic Paris Getaway",
+    people: 2,
+    price: 3600,
+    pricePerPerson: 1800,
+    maxPeople: 4,
+    duration: 6,
+    description: "Experience the romance of Paris with visits to the Eiffel Tower, Seine River cruises, and gourmet dining experiences.",
+    name: "France_Paris"
+  },
+  {
+    country: "Greece",
+    title: "Santorini Sunset Cruise",
+    people: 2,
+    price: 3000,
+    pricePerPerson: 1500,
+    maxPeople: 6,
+    duration: 3,
+    description: "Sail into the stunning Santorini sunset with luxurious cruises, picturesque views, and authentic Greek cuisine.",
+    name: "Greece_Santorini"
+  },
+  {
+    country: "Kenya",
+    title: "Safari Adventure in Maasai Mara",
+    people: 6,
+    price: 4200,
+    pricePerPerson: 700,
+    maxPeople: 10,
+    duration: 7,
+    description: "Embark on a thrilling safari in Maasai Mara, spotting the Big Five and experiencing the vibrant local culture.",
+    name: "Kenya_Safari"
+  },
+  {
+    country: "Norway",
+    title: "Fjord Exploration Journey",
+    people: 3,
+    price: 4000,
+    pricePerPerson: 1333,
+    maxPeople: 6,
+    duration: 5,
+    description: "Explore Norway's majestic fjords with guided boat tours, scenic hikes, and cozy stays in local villages.",
+    name: "Norway_Fjord"
+  },
+  {
+    country: "Peru",
+    title: "Inca Trail to Machu Picchu",
+    people: 4,
+    price: 5000,
+    pricePerPerson: 1250,
+    maxPeople: 7,
+    duration: 6,
+    description: "Hike the legendary Inca Trail to the breathtaking ruins of Machu Picchu, an adventure steeped in history and natural beauty.",
+    name: "Peru_IncaTrail"
+  },
+  {
+    country: "Turkey",
+    title: "Hot Air Balloon Ride in Cappadocia",
+    people: 3,
+    price: 2500,
+    pricePerPerson: 833,
+    maxPeople: 5,
+    duration: 2,
+    description: "Take to the skies with a magical hot air balloon ride over Cappadocia's unique landscapes and fairy chimneys.",
+    name: "Turkey_Cappadocia"
+  },
+  {
+    country: "Brazil",
+    title: "Rio Carnival Experience",
+    people: 5,
+    price: 3100,
+    pricePerPerson: 620,
+    maxPeople: 8,
+    duration: 4,
+    description: "Join the vibrant celebration of Rio Carnival with samba dancing, colorful parades, and unforgettable nightlife.",
+    name: "Brazil_RioCarnival"
+  },
+  {
+    country: "China",
+    title: "Yangtze River Cruise",
+    people: 2,
+    price: 3300,
+    pricePerPerson: 1650,
+    maxPeople: 6,
+    duration: 6,
+    description: "Cruise along the majestic Yangtze River, exploring ancient towns, dramatic gorges, and cultural landmarks.",
+    name: "China_Yangtze"
+  },
+  {
+    country: "Egypt",
+    title: "Nile River Adventure",
+    people: 4,
+    price: 2900,
+    pricePerPerson: 725,
+    maxPeople: 8,
+    duration: 5,
+    description: "Sail down the historic Nile River with stops at ancient temples, bustling markets, and serene riverside views.",
+    name: "Egypt_Nile"
+  },
+  {
+    country: "France",
+    title: "Wine Tour in Bordeaux",
+    people: 3,
+    price: 2700,
+    pricePerPerson: 900,
+    maxPeople: 5,
+    duration: 3,
+    description: "Indulge in a luxurious wine tour through Bordeaux, visiting world-class vineyards and sampling exquisite wines.",
+    name: "France_Bordeaux"
+  },
+  {
+    country: "Greece",
+    title: "Athens Historical Tour",
+    people: 6,
+    price: 2200,
+    pricePerPerson: 367,
+    maxPeople: 10,
+    duration: 4,
+    description: "Dive into the rich history of Athens with guided tours of the Acropolis, ancient ruins, and vibrant local neighborhoods.",
+    name: "Greece_Athens"
+  },
+  {
+    country: "Kenya",
+    title: "Amboseli Wildlife Safari",
+    people: 5,
+    price: 3800,
+    pricePerPerson: 760,
+    maxPeople: 7,
+    duration: 5,
+    description: "Spot elephants against the stunning backdrop of Mount Kilimanjaro on this unforgettable wildlife safari.",
+    name: "Kenya_Amboseli"
+  },
+  {
+    country: "Norway",
+    title: "Northern Lights Adventure",
+    people: 2,
+    price: 4500,
+    pricePerPerson: 2250,
+    maxPeople: 4,
+    duration: 4,
+    description: "Witness the magic of the Northern Lights with guided excursions, cozy lodges, and breathtaking Arctic landscapes.",
+    name: "Norway_NorthernLights"
+  },
+  {
+    country: "Peru",
+    title: "Amazon River Expedition",
+    people: 3,
+    price: 3200,
+    pricePerPerson: 1067,
+    maxPeople: 6,
+    duration: 7,
+    description: "Venture deep into the Peruvian Amazon with boat expeditions, wildlife spotting, and authentic jungle experiences.",
+    name: "Peru_AmazonRiver"
+  },
+  {
+    country: "Turkey",
+    title: "Istanbul City Highlights Tour",
+    people: 4,
+    price: 1800,
+    pricePerPerson: 450,
+    maxPeople: 6,
+    duration: 3,
+    description: "Discover the cultural and historical treasures of Istanbul with visits to the Hagia Sophia, Grand Bazaar, and more.",
+    name: "Turkey_Istanbul"
+  }
+];
