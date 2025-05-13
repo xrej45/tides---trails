@@ -769,6 +769,7 @@ main h2{
     height: 55.925%;
 }
 .chosenTourUserCont{
+    display: inline-block;
     position: absolute;
     width: 59.3%;
     height: 100%;
@@ -858,7 +859,7 @@ main h2{
     display: inline-block;
     position: absolute;
     left: 50% ;
-    bottom: 7%;
+    bottom: -7%;
     font-size: 32px;
     font-weight: 500;
     color: white;
@@ -881,9 +882,37 @@ main h2{
     transition: all 0.3s;
 }
 
+.chosenTourDetailsCont{
+    display: inline-block;
+    right: 0;
+    position: absolute;
+    width: 40.3%;
+    height: 100%;
+}
+.chosenTourDetailsCont span{
+    font-family: "Itim";
+    font-size: 32px;
+}
+.chosenTourDetailsImg{
+    height: 45.86%;
+    width: 100%;
+    background:url(tourCardImages/Brazil_RioCarnival.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4%;
+}
+.chosenTourDetailsInfoCont{
+    font-family: "Itim";
 
+}
+.chosenTourDetailsTitle{
+    font-size: clamp(26px,2vw,32px);
 
-
+}
+.chosenTourDetailsDescription{
+    font-size: clamp(18px,1.5vw,24px);
+    padding-top: 5%;
+}
 
 
 

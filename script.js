@@ -167,7 +167,7 @@ if (window.location.pathname.endsWith("TourDetails.html")) {
 
     increaseBtn.addEventListener("click",()=>{if(peop.value<chosenTour.maxPeople){peop.value++ , console.log(flatpickr.formatDate(fp.selectedDates[0], "d-m-Y"))}})
     decreaseBtn.addEventListener("click",()=>{if(peop.value>1){peop.value--}})
-    toForm.addEventListener("click",()=>{window.location.href = `TourPay.html?tourists=${peop.value}&date=${flatpickr.formatDate(fp.selectedDates[0], "d-m-Y")}`})                                      
+    toForm.addEventListener("click",()=>{window.location.href = `TourPay.html?tourists=${peop.value}&date=${flatpickr.formatDate(fp.selectedDates[0], "d-m-Y")}&tourName=${chosenTour.name}`})                                      
 
     
 
@@ -208,7 +208,9 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                                 else{userExpYear.classList.remove("redshit")}})
 
 
-
+    const chosenTourName = new URLSearchParams(window.location.search).get('tourName')
+    const chosenTour = tours.find(obj => obj.name === chosenTourName)
+    console.log(chosenTour)
 
 
 
