@@ -859,7 +859,7 @@ main h2{
     display: inline-block;
     position: absolute;
     left: 50% ;
-    bottom: -7%;
+    bottom: 5%;
     font-size: 32px;
     font-weight: 500;
     color: white;
@@ -916,8 +916,8 @@ main h2{
 }
 .tourPayPMDCont{
     position: absolute;
-    bottom: 0%;
-    right: -10% ;
+    bottom: 8%;
+    right: 0% ;
     width: 100%;
 }
 .tourPayPMD{
@@ -928,6 +928,13 @@ main h2{
     font-family: "Itim";
     font-size: 28px;
 
+}
+.tourPayPMD:nth-child(2){
+    padding-right: 10%;
+
+}
+.tourPayPMD:last-child{
+    padding-right: 0;
 }
 .tourPayPMD:nth-child(1):after{
     content: "per person";
