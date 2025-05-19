@@ -767,6 +767,7 @@ main h2{
     top: 19%;
     height:55.925% ;
     max-height: 55.925%;
+    min-height: 504px;
 }
 .chosenTourUserCont{
     display: inline-block;
