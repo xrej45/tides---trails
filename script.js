@@ -209,8 +209,19 @@ if (window.location.pathname.endsWith("TourPay.html")) {
 
 
     const chosenTourName = new URLSearchParams(window.location.search).get('tourName')
+    const peopleAmount = new URLSearchParams(window.location.search).get('tourists')
+    const chosenDate = new URLSearchParams(window.location.search).get('date')
     const chosenTour = tours.find(obj => obj.name === chosenTourName)
     console.log(chosenTour)
+    document.querySelector(".chosenTourDetailsCont").innerHTML =   `
+                                                        <span>Your tour details</span>
+                                                            <div class="chosenTourDetailsImg" style='background:url(tourCardImages/${chosenTour.name}.png);height: 45.86%;width: 100%;background-size: cover;background-repeat: no-repeat;border-radius: 16px;'></div>
+                                                            <div class="chosenTourDetailsInfoCont">
+                                                                <div class="chosenTourDetailsTitle">${chosenTour.country} - ${chosenTour.title}</div>
+                                                                <div class="chosenTourDetailsDescription">${chosenTour.description}</div>
+                                                            </div>
+                                                            <div class="tourPayPMDCont"><div class="tourPayPMD">$${chosenTour.pricePerPerson * peopleAmount}</div><div class="tourPayPMD">${peopleAmount}</div><div class="tourPayPMD">${chosenTour.duration} days</div></div>
+                                                        </div>`
 
 
 
