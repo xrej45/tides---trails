@@ -852,7 +852,8 @@ main h2{
 }
 
 .redshit{
-    background-color: rgb(255, 0, 0, 80%);
+    box-shadow: rgb(207, 0, 0) 0px 0px 6px 5px ;
+    /*background-color: rgb(255, 0, 0, 80%);*/
     border-radius: 4px;
     
 }

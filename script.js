@@ -177,8 +177,27 @@ if (window.location.pathname.endsWith("TourDetails.html")) {
 if (window.location.pathname.endsWith("TourPay.html")) {
     const userExpMonth = document.querySelector('.userExpMonth');
     const userExpYear = document.querySelector('.userExpYear');
-    const userCVV = document.querySelector(".userCVV")
-    const userInfoNumber = document.querySelector(".userInfoNumber")
+    const userCVV = document.querySelector(".userCVV");
+    const userCardNumber = document.querySelector(".userCardNumber");
+    const userName = document.querySelector(".userInfoName");
+    const userSurName = document.querySelector(".userInfoSurname");
+    const userEmail = document.querySelector(".userInfoEmail");
+    const userPhoneNum = document.querySelector(".userInfoNumber");
+    const payBtn = document.querySelector(".payBtn");
+    const userCardNameSurname = document.querySelector(".userNS");
+    const user ={
+        Name : null ,
+        SurName : null ,
+        Email : null ,
+        PhoneNum : null ,
+        CardNum: null ,
+        CardNameSurname:null,
+        ExpMonth:null,
+        ExpYear:null ,
+        Cvv:null,
+
+
+    }
     
     userExpMonth.addEventListener('keypress', e => {
         if (e.charCode < 49 || e.charCode > 57) {
@@ -195,7 +214,7 @@ if (window.location.pathname.endsWith("TourPay.html")) {
           e.preventDefault();
         }
       });
-    userInfoNumber.addEventListener('keypress', e => {
+    userPhoneNum.addEventListener('keypress', e => {
         if (e.charCode < 48 || e.charCode > 57) {
           e.preventDefault();
         }
@@ -222,6 +241,33 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                                             </div>
                                                             <div class="tourPayPMDCont"><div class="tourPayPMD tourPayPMD1">$${chosenTour.pricePerPerson * peopleAmount}</div><div class="tourPayPMD tourPayPMD2">${peopleAmount}</div><div class="tourPayPMD tourPayPMD3">${chosenTour.duration} days</div></div>
                                                         </div>`
+
+
+
+
+    payBtn.addEventListener("click",()=>{if(
+                                            userName.value!=""&&
+                                            userSurName.value!=""&&
+                                            userEmail.value!=""&&
+                                            userPhoneNum.value!=""&&
+                                            userCardNumber.value!=""&&
+                                            userCardNameSurname.value!=""&&
+                                            userExpMonth.value!=""&&
+                                            userExpYear.value!=""&&
+                                            userCVV.value!=""){user.Name =userName.value,
+                                                                user.SurName = userSurName.value,
+                                                                user.Email = userEmail.value,
+                                                                user.PhoneNum =userPhoneNum.value,
+                                                                user.CardNum =  userCardNumber.value,
+                                                                user.CardNameSurname = userCardNameSurname.value,
+                                                                user.ExpMonth = userExpMonth.value,
+                                                                user.ExpYear = userExpYear.value,
+                                                                user.Cvv = userCVV.value,
+                                                                console.log(user)
+                                                            }}
+
+   
+    )
 
 
 
