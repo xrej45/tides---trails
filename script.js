@@ -220,7 +220,7 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                                                 <div class="chosenTourDetailsTitle">${chosenTour.country} - ${chosenTour.title}</div>
                                                                 <div class="chosenTourDetailsDescription">${chosenTour.description}</div>
                                                             </div>
-                                                            <div class="tourPayPMDCont"><div class="tourPayPMD">$${chosenTour.pricePerPerson * peopleAmount}</div><div class="tourPayPMD">${peopleAmount}</div><div class="tourPayPMD">${chosenTour.duration} days</div></div>
+                                                            <div class="tourPayPMDCont"><div class="tourPayPMD tourPayPMD1">$${chosenTour.pricePerPerson * peopleAmount}</div><div class="tourPayPMD tourPayPMD2">${peopleAmount}</div><div class="tourPayPMD tourPayPMD3">${chosenTour.duration} days</div></div>
                                                         </div>`
 
 

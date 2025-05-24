@@ -768,6 +768,7 @@ main h2{
     height:55.925% ;
     max-height: 55.925%;
     min-height: 504px;
+    min-width: 1080px;
 }
 .chosenTourUserCont{
     display: inline-block;
@@ -925,39 +926,47 @@ main h2{
     font-size: clamp(26px,2vw,32px);
     line-height: 55px;
     display: inline-block;
-    padding-right: 20%;
-    font-family: "Itim";
-    font-size: 28px;
-
-}
-.tourPayPMD:nth-child(2){
-    padding-right: 30%;
-
-}
-.tourPayPMD:last-child{
     padding-right: 0;
+    font-family: "Itim";
+    
+
 }
-.tourPayPMD:nth-child(1):after{
+.tourPayPMD1{
+    left: 0;
+    position: absolute;
+
+}
+.tourPayPMD2{
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+
+}
+.tourPayPMD3{
+    right:-10%;
+    position: absolute;
+}
+.tourPayPMD1:after{
     content: "total";
     font-size: 24px;
-    position: absolute;
-    left:2%;
+    position: relative;
+    left:-50%;
     top:40px;
     opacity: 67%;
 }
-.tourPayPMD:nth-child(2):after{
+.tourPayPMD2:after{
     content: "people";
     font-size: 24px;
-    position: absolute;
-    left: 33%;
+    position: relative;
+    left: -50%;
     top:40px;
     opacity: 67%;
 }
-.tourPayPMD:nth-child(3):after{
+.tourPayPMD3:after{
     content: "duration";
     font-size: 24px;
-    position: absolute;
-    left: 70%;
+    position: relative;
+    left:-50%;
     top:40px;
     opacity: 67%;
 }
