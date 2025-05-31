@@ -765,10 +765,7 @@ main h2{
     left: 50%;
     transform: translateX(-50%);
     top: 19%;
-    height:55.925% ;
-    max-height: 55.925%;
-    min-height: 504px;
-    min-width: 1080px;
+
 }
 .chosenTourUserCont{
     display: inline-block;
@@ -972,12 +969,27 @@ main h2{
     opacity: 67%;
 }
 
+.paymentConfirimed{
+    background:url(images/payment-card.png);
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+}
 
 
-
-
-
-
+.tPaymentConfirimed{
+    font-family: "Itim";
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    opacity: 70%;
+}
 
 
 
@@ -1327,4 +1339,9 @@ main h2{
     .showHideMenuBtn{
         display: none;
     }
+    .tourPayCont{ 
+    max-height: 55.925%;
+    min-height: 504px;
+    min-width: 1080px;
+        }
     }
