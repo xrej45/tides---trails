@@ -212,7 +212,7 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                                                     </div>
                                                                     <div class="chosenTourDetailsCont">
                                                                 <span>Your tour details</span>
-                                                                    <div class="chosenTourDetailsImg" style='background:url(tourCardImages/${chosenTour.name}.png);height: 45.86%;width: 100%;background-size: cover;background-repeat: no-repeat;border-radius: 16px;'></div>
+                                                                    <div class="chosenTourDetailsImg" style='background:url(tourCardImages/${chosenTour.name}.png);background-size: cover;background-repeat: no-repeat;'></div>
                                                                     <div class="chosenTourDetailsInfoCont">
                                                                         <div class="chosenTourDetailsTitle">${chosenTour.country} - ${chosenTour.title}</div>
                                                                         <div class="chosenTourDetailsDescription">${chosenTour.description}</div>
@@ -295,6 +295,7 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                             userCardNameSurname.value!=""&&
                                             userExpMonth.value!=""&&
                                             userExpYear.value!=""&&
+                                            userExpYear.value>25&&
                                             userCVV.value!=""){user.Name =userName.value,
                                                                 user.SurName = userSurName.value,
                                                                 user.Email = userEmail.value,
