@@ -315,3 +315,97 @@ if (window.location.pathname.endsWith("TourPay.html")) {
 
 
 }
+
+if (window.location.pathname.endsWith("About.html")) {
+
+    let pageIndex = 1
+    console.log(pageIndex)
+
+    
+    function renderAboutPage (Index){
+
+        if (Index === 1){
+                document.querySelector(".aboutCont").innerHTML = `
+                    <div class="aboutContImg" style="background: url(images/Our_story.png); background-size: cover;background-repeat: no-repeat;background-position: center;"></div>
+                    <div class="aboutText">
+                        <div class="aboutTitle">Our Story</div>
+                        <div class="aboutDescript">Tides & Trails was founded in 2010 with a passion for creating exceptional travel experiences. Our team of seasoned travel experts and adventure enthusiasts is dedicated to crafting unforgettable journeys tailored to our clients' dreams.</div>
+                    </div>
+                    <div class="BtnsCont">
+                        <div class="prevBtn"><span class="material-symbols-outlined">line_start_arrow_notch</span></div>
+                        <div class="nextBtn"><span class="material-symbols-outlined">line_end_arrow_notch</span></div>
+                    </div>`
+                    const nextBtn = document.querySelector(".nextBtn")
+                    const prevBtn = document.querySelector(".prevBtn")
+                    nextBtn.addEventListener("click",()=>{if(pageIndex<3){pageIndex++,renderAboutPage(pageIndex)}})
+                    prevBtn.addEventListener("click",()=>{if(pageIndex>1){pageIndex--,renderAboutPage(pageIndex)}})
+                    }
+                    
+                   
+
+
+        else if (Index === 2){
+                document.querySelector(".aboutCont").innerHTML = `
+                    <div class="aboutContImg" style="background: url(images/Our_dest.png); background-size: cover;background-repeat: no-repeat;background-position: center;"></div>
+                    <div class="aboutText">
+                        <div class="aboutTitle">Our Destinations</div>
+                        <div class="aboutDescript">We offer curated tours to some of the worlds most captivating destinations, including Brazil, China, Egypt, France, Greece, Kenya, Norway, Peru, and Turkey. For those seeking a maritime escape, our cruises span the stunning waters of the Caribbean, Mediterranean, and Nordic regions.</div>
+                    </div>
+                    <div class="BtnsCont">
+                        <div class="prevBtn"><span class="material-symbols-outlined">line_start_arrow_notch</span></div>
+                        <div class="nextBtn"><span class="material-symbols-outlined">line_end_arrow_notch</span></div>
+                    </div>`
+                    const nextBtn = document.querySelector(".nextBtn")
+                    const prevBtn = document.querySelector(".prevBtn")
+                    nextBtn.addEventListener("click",()=>{if(pageIndex<3){pageIndex++,renderAboutPage(pageIndex)}})
+                    prevBtn.addEventListener("click",()=>{if(pageIndex>1){pageIndex--,renderAboutPage(pageIndex)}})}
+                    
+
+        else if (Index === 3){
+                document.querySelector(".aboutCont").innerHTML = `
+                    <div class="aboutContImg" style="background: url(images/Why_TT.png); background-size: cover;background-repeat: no-repeat;background-position: center;"></div>
+                    <div class="aboutText">
+                        <div class="aboutTitle">Why Tides & Trails?</div>
+                        <div class="aboutDescript">At Tides & Trails, we bring together local expertise, personalized service, and a love for exploration to ensure your trip is seamless, memorable, and inspiring. Let us guide you on your next adventure!</div>
+                    </div>
+                    <div class="BtnsCont">
+                        <div class="prevBtn"><span class="material-symbols-outlined">line_start_arrow_notch</span></div>
+                        <div class="nextBtn"><span class="material-symbols-outlined">line_end_arrow_notch</span></div>
+                    </div>`
+                    const nextBtn = document.querySelector(".nextBtn")
+                    const prevBtn = document.querySelector(".prevBtn")
+                    nextBtn.addEventListener("click",()=>{if(pageIndex<3){pageIndex++,renderAboutPage(pageIndex)}})
+                    prevBtn.addEventListener("click",()=>{if(pageIndex>1){pageIndex--,renderAboutPage(pageIndex)}})}
+                    
+                    
+                
+                 
+
+
+
+
+                
+                
+                
+        
+    }
+    renderAboutPage(1)
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

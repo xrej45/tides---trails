@@ -980,7 +980,6 @@ main h2{
     transform: translate(-50%,-100%);
 }
 
-
 .tPaymentConfirimed{
     font-family: "Itim";
     font-size: 3vw;
@@ -993,6 +992,69 @@ main h2{
 
 
 
+.aboutCont{
+    width:90.5%;
+    height: 78%;
+    border: 4px black solid;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    font-family: 'Itim';
+    border-radius: 16px;
+}
+.aboutContImg{
+    height: 94.3%;
+    width: 56.2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 15px;
+    left: 1.4%;
+}
+.aboutText{
+    width: 43.8%;
+    position: absolute;
+    right: 0%;
+    padding: 3%;
+    padding-top: 1%;
+    
+    top: 0%;
+}
+.aboutTitle{
+    font-size: clamp(42px,4vw,64px);
+}
+.aboutDescript{
+    font-size: clamp(26px, 2vw ,32px);
+    padding-top: 5%;
+}
+
+.BtnsCont{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    display: inline-flex;
+    column-gap: 16px;
+}
+.nextBtn{
+    padding: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    border-radius: 4px;
+    cursor: pointer;
+    user-select:none;
+
+}
+.prevBtn{
+    padding: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.295);
+    border-radius: 4px;
+    cursor: pointer;
+    user-select:none;
+
+}
 
 
 
@@ -1364,6 +1426,22 @@ main h2{
     }
     .tPaymentConfirimed{
         font-size: 40px;
+    }
+    .aboutCont{
+        width: 92.2%;
+        max-height: 100%;
+    }
+    .aboutContImg{
+        width: 91.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 2%;
+        height: 41.2%;
+    }
+    .aboutText{
+        width: 100%;
+        top:45%
+
     }
 
 
