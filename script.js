@@ -295,7 +295,7 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                             userCardNameSurname.value!=""&&
                                             userExpMonth.value!=""&&
                                             userExpYear.value!=""&&
-                                            userExpYear.value>25&&
+                                            userExpYear.value>=25&&
                                             userCVV.value!=""){user.Name =userName.value,
                                                                 user.SurName = userSurName.value,
                                                                 user.Email = userEmail.value,
