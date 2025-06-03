@@ -1499,6 +1499,9 @@ main h2{
         top:45%
 
     }
+    .hotCruisesBtn , .coldCruisesBtn{
+        height: 90%;
+    }
 
 
 }
