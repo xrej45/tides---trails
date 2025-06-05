@@ -1,4 +1,5 @@
 import {tours} from "./tourList.js"
+import { cruises } from "./CruisesList.js";
 
 
 
@@ -391,21 +392,27 @@ if (window.location.pathname.endsWith("About.html")) {
     }
     renderAboutPage(1)
 
-    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (window.location.pathname.endsWith("CruisesList.html")) {
+    const cruiseType = new URLSearchParams(window.location.search).get('type')
+    console.log(cruises)
+    function renderCruises () {
+        const cruisesHTML = []
+        cruises.forEach((cruise)=>{if(cruise.type === cruiseType){cruisesHTML.push(
+                                    `<div class="cruiseCont">
+                                            <div class="cruiseImg" style="background:url(tourCardImages/${cruise.title}.png); background-size: cover;background-repeat: no-repeat;background-position: center;"></div>
+                                            <div class="cruiseInfoCont">
+                                                <div class="cruiseTitle">${cruise.name}</div>
+                                                <div class="cruiseDescript">${cruise.shortDescription}</div>
+                                                <div class="cruisePrice">Price per person: $${cruise.pricePerPerson}</div>
+                                                <div class="cruiseDuration">Days : ${cruise.amountOfDays}</div>
+                                                <a href="CruiseDtails.html?cruiseTitle=${cruise.title}" class="cruiseLearnMore">Learn more</a>
+                                            </div>
+                                        </div>`
+                    
+        )}})
+        document.querySelector(".cruisesCont").innerHTML = cruisesHTML.join('')
+        }
+        renderCruises()
 }
