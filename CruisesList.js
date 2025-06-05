@@ -1,4 +1,4 @@
-export const cruises = [
+export const cruises =  [
   {
     type: "hot",
     place: "Caribbean",
@@ -6,7 +6,8 @@ export const cruises = [
     name: "Caribbean Paradise Cruise",
     amountOfDays: 7,
     shortDescription: "Sail through turquoise waters and explore tropical islands in the Caribbean.",
-    title: "caribbean_paradise"
+    title: "caribbean_paradise",
+    ship: "Ocean Breeze"
   },
   {
     type: "hot",
@@ -15,7 +16,8 @@ export const cruises = [
     name: "Mediterranean Jewel Voyage",
     amountOfDays: 10,
     shortDescription: "Discover ancient cities and stunning coastlines on this Mediterranean adventure.",
-    title: "mediterranean_jewel"
+    title: "mediterranean_jewel",
+    ship: "Sea Sapphire"
   },
   {
     type: "cold",
@@ -24,6 +26,7 @@ export const cruises = [
     name: "Nordic Fjords and Northern Lights Expedition",
     amountOfDays: 12,
     shortDescription: "Experience breathtaking fjords and witness the magical Northern Lights.",
-    title: "nordic_fjords"
+    title: "nordic_fjords",
+    ship: "Arctic Voyager"
   }
 ];

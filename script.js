@@ -231,7 +231,7 @@ if (window.location.pathname.endsWith("TourPay.html")) {
                                                             
                                                             }
     renderTourPayCont("first")
-     const userExpMonth = document.querySelector('.userExpMonth');
+    const userExpMonth = document.querySelector('.userExpMonth');
     const userExpYear = document.querySelector('.userExpYear');
     const userCVV = document.querySelector(".userCVV");
     const userCardNumber = document.querySelector(".userCardNumber");
@@ -407,7 +407,7 @@ if (window.location.pathname.endsWith("CruisesList.html")) {
                                                 <div class="cruiseDescript">${cruise.shortDescription}</div>
                                                 <div class="cruisePrice">Price per person: $${cruise.pricePerPerson}</div>
                                                 <div class="cruiseDuration">Days : ${cruise.amountOfDays}</div>
-                                                <a href="CruiseDtails.html?cruiseTitle=${cruise.title}" class="cruiseLearnMore">Learn more</a>
+                                                <a href="CruiseDetails.html?cruiseTitle=${cruise.title}" class="cruiseLearnMore">Learn more</a>
                                             </div>
                                         </div>`
                     
@@ -415,4 +415,161 @@ if (window.location.pathname.endsWith("CruisesList.html")) {
         document.querySelector(".cruisesCont").innerHTML = cruisesHTML.join('')
         }
         renderCruises()
+}
+
+if (window.location.pathname.endsWith("CruiseDetails.html")){
+    const chosenCruiseName = new URLSearchParams(window.location.search).get('cruiseTitle')
+    
+    const chosenCruise = cruises.find(obj => obj.title.toLowerCase() === chosenCruiseName.toLowerCase());
+    console.log(chosenCruise.title)
+
+
+
+
+
+
+    function renderCruisePayCont (way){if (way ==="first"){
+            document.querySelector(".tourPayCont").innerHTML =   `
+                                                                      <div class="chosenTourUserCont">
+                                                                        <span>Fill form to book a cruise</span>
+                                                                        <fieldset class="userGeneralInfo">
+                                                                            <legend style="font-family: Itim; font-size: 28px; padding: 0px 16px;">Generail info</legend>
+                                                                            <form class="generalInfoForm">
+                                                                                <input type="text" class="userInfoName" placeholder="Name" >
+                                                                                <input type="text" class="userInfoSurname" placeholder="Surname" >
+                                                                                <input type="email" class="userInfoEmail" placeholder="Email"  >
+                                                                                <input type="text" class="userInfoNumber" placeholder="Phone number (+0-123-456-789)" >
+                                                                            </form>
+                                                                            
+                                                                        </fieldset>
+                                                                        <fieldset class="userPaymentInfo">
+                                                                            <legend style="font-family: Itim; font-size: 28px; padding: 0px 16px;">Payment info</legend>
+                                                                            <form class="paymentInfoForm">
+                                                                                <input type="number" class="userCardNumber" placeholder="Card Number : (123-456-789) " >
+                                                                                <input type="text" class="userNS" placeholder="Card Holder : Name & Surname" >
+                                                                                <div class="userExpDate"><input type="text" class="userExpMonth" placeholder="Expire date : MM" style="width: 49%;margin: 0;padding: 0;" min="1" max="12" inputmode="numeric" maxlength="2" >
+                                                                                                            <input type="text" class="userExpYear" placeholder="Expire date : YY" style="width: 49%;margin: 0;padding: 0;" min="25" inputmode="numeric" maxlength="2" ></div>
+                                                                                <input type="text" class="userCVV" placeholder="CVV" maxlength="3" >
+                                                                            </form>
+                                                                            
+                                                                        </fieldset>
+                                                                        <button class="payBtn">Book</button>
+                                                                    </div>
+                                                                    <div class="chosenTourDetailsCont">
+                                                                <span>Your Cruise details</span>
+                                                                    <div class="chosenTourDetailsImg" style='background:url(tourCardImages/${chosenCruise.title}.png);background-size: cover;background-repeat: no-repeat;'></div>
+                                                                    <div class="chosenTourDetailsInfoCont">
+                                                                        <div class="chosenTourDetailsTitle">${chosenCruise.name}</div>
+                                                                        <div class="chosenTourDetailsDescription">${chosenCruise.shortDescription}</div>
+                                                                    </div>
+                                                                    <div class="tourPayPMDCont"><div class="tourPayPMD tourPayPMD1">$${chosenCruise.pricePerPerson}</div><div class="tourPayPMD tourPayPMD2">${chosenCruise.amountOfDays}</div><div class="tourPayPMD tourPayPMD3">${chosenCruise.ship}</div></div>
+                                                                </div>`}
+
+                                                                else{ document.querySelector(".tourPayCont").innerHTML =`   
+                                                                    <a href="Tours.html" class="paymentConfirimed"></a>
+                                                                    <a href="Tours.html" class="tPaymentConfirimed">Payment Confirimed</a>`}
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            }
+
+    renderCruisePayCont("first")
+    const userExpMonth = document.querySelector('.userExpMonth');
+    const userExpYear = document.querySelector('.userExpYear');
+    const userCVV = document.querySelector(".userCVV");
+    const userCardNumber = document.querySelector(".userCardNumber");
+    const userName = document.querySelector(".userInfoName");
+    const userSurName = document.querySelector(".userInfoSurname");
+    const userEmail = document.querySelector(".userInfoEmail");
+    const userPhoneNum = document.querySelector(".userInfoNumber");
+    const payBtn = document.querySelector(".payBtn");
+    const userCardNameSurname = document.querySelector(".userNS");
+    const user ={
+        Name : null ,
+        SurName : null ,
+        Email : null ,
+        PhoneNum : null ,
+        CardNum: null ,
+        CardNameSurname:null,
+        ExpMonth:null,
+        ExpYear:null ,
+        Cvv:null,
+
+
+    }
+    
+    userExpMonth.addEventListener('keypress', e => {
+        if (e.charCode < 49 || e.charCode > 57) {
+          e.preventDefault();
+        }
+      });
+    userExpYear.addEventListener('keypress', e => {
+        if (e.charCode < 49 || e.charCode > 57) {
+          e.preventDefault();
+        }
+      });
+    userCVV.addEventListener('keypress', e => {
+        if (e.charCode < 48 || e.charCode > 57) {
+          e.preventDefault();
+        }
+      });
+    userPhoneNum.addEventListener('keypress', e => {
+        if (e.charCode < 48 || e.charCode > 57) {
+          e.preventDefault();
+        }
+      });
+
+
+    userExpMonth.addEventListener("input",()=>{if(userExpMonth.value>12||userExpMonth.value<0){userExpMonth.classList.add("redshit"),userExpMonth.title="fill this field"}
+                                                else{userExpMonth.classList.remove("redshit")}})
+    userExpYear.addEventListener("input",()=>{if(userExpYear.value<25&&userExpYear.value>=1){userExpYear.classList.add("redshit"),userExpYear.title="fill this field"}
+                                                else{userExpYear.classList.remove("redshit")}})
+
+
+
+
+
+
+    payBtn.addEventListener("click",()=>{if(
+                                            userName.value!=""&&
+                                            userSurName.value!=""&&
+                                            userEmail.value!=""&&
+                                            userPhoneNum.value!=""&&
+                                            userCardNumber.value!=""&&
+                                            userCardNameSurname.value!=""&&
+                                            userExpMonth.value!=""&&
+                                            userExpYear.value!=""&&
+                                            userExpYear.value>=25&&
+                                            userCVV.value!=""){user.Name =userName.value,
+                                                                user.SurName = userSurName.value,
+                                                                user.Email = userEmail.value,
+                                                                user.PhoneNum =userPhoneNum.value,
+                                                                user.CardNum =  userCardNumber.value,
+                                                                user.CardNameSurname = userCardNameSurname.value,
+                                                                user.ExpMonth = userExpMonth.value,
+                                                                user.ExpYear = userExpYear.value,
+                                                                user.Cvv = userCVV.value,
+                                                                console.log(user)
+                                                                renderCruisePayCont("second")
+                                                            }}
+
+   
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
